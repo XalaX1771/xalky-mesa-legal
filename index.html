@@ -84,16 +84,51 @@
     border-radius: 999px;
     margin-bottom: 18px;
   }
+
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .lang-switch button {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink700);
+    background: var(--papel);
+    border: 1.5px solid var(--mint300);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--mint400);
+    border-color: var(--mint600);
+    color: var(--ink900);
+  }
+
+  [data-lang][hidden] { display: none; }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1>Política de Privacidad</h1>
-      <div class="updated">Xalky Mesa · Última actualización: 18 de noviembre de 2026</div>
-    </header>
+    <nav class="lang-switch" aria-label="Idioma / Language">
+      <button type="button" data-set="es" aria-pressed="true">Español</button>
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+      <button type="button" data-set="pt" aria-pressed="false">Português</button>
+    </nav>
 
-    <div class="card">
+    <div data-lang="es">
+      <header>
+        <h1>Política de Privacidad</h1>
+        <div class="updated">Xalky Mesa · Última actualización: 18 de noviembre de 2026</div>
+      </header>
+
+      <div class="card">
       <span class="badge">100% local, sin conexión</span>
 
       <h2>Resumen</h2>
@@ -165,7 +200,195 @@
         <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>.
         También podés leer los <a href="terms.html">Términos del Servicio</a>.
       </p>
+      </div>
+    </div>
+
+    <div data-lang="en" hidden>
+      <header>
+        <h1>Privacy Policy</h1>
+        <div class="updated">Xalky Mesa · Last updated: November 18, 2026</div>
+      </header>
+
+      <div class="card">
+      <span class="badge">100% local, offline</span>
+
+      <h2>Summary</h2>
+      <p>
+        Xalky Mesa is a 100% local, offline app. It has no servers of its own,
+        doesn't require creating an account or signing in, and doesn't collect,
+        store or send any personal data to any external service.
+      </p>
+
+      <h2>What data the app uses</h2>
+      <p>
+        Everything you create while using Xalky Mesa — tables, players, scores,
+        games, notes, preferences — is stored only on your own device, in a local
+        database. It never leaves your phone or tablet unless you choose to
+        export it.
+      </p>
+
+      <h2>Backup</h2>
+      <p>
+        The backup feature creates a file with your data and shares it through
+        Android's native share sheet (for example, to save it to Google Drive or
+        send it another way) — this only happens when you explicitly ask for it,
+        never automatically or without your involvement.
+      </p>
+
+      <h2>Report a problem</h2>
+      <p>
+        In Settings you can use "Report a problem or suggestion". This opens your
+        own email app with a ready-made message to <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>, which includes technical
+        details to help us find the problem: the app version, the language, the
+        device brand and model, and the Android version. The app doesn't send
+        anything on its own: the message only goes out if you send it, and before
+        that you can see, edit or delete any of those details. The email we
+        receive is used only to reply to you and fix the problem.
+      </p>
+
+      <h2>Analytics and advertising</h2>
+      <p>
+        Xalky Mesa doesn't include any third-party analytics, usage tracking or
+        advertising SDK.
+      </p>
+
+      <h2>In-app purchases</h2>
+      <p>
+        Some visual table themes are optional paid content. Purchases are
+        processed through Google Play Billing — Xalky Mesa doesn't receive or
+        store any information about your payment method.
+      </p>
+
+      <h2>Permissions</h2>
+      <p>
+        The app doesn't request location, camera, contacts or external storage
+        permissions. The only access it uses is the device's vibration for some
+        touch interactions.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If this policy changes in the future, the "last updated" date above will
+        be updated accordingly.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have any questions about this policy, you can write to <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>.
+        You can also read the <a href="terms.html">Terms of Service</a>.
+      </p>
+      </div>
+    </div>
+
+    <div data-lang="pt" hidden>
+      <header>
+        <h1>Política de Privacidade</h1>
+        <div class="updated">Xalky Mesa · Última atualização: 18 de novembro de 2026</div>
+      </header>
+
+      <div class="card">
+      <span class="badge">100% local, sem internet</span>
+
+      <h2>Resumo</h2>
+      <p>
+        O Xalky Mesa é um aplicativo 100% local e que funciona sem internet. Não
+        tem servidores próprios, não exige criar uma conta nem fazer login, e não
+        coleta, armazena nem envia nenhum dado pessoal a nenhum serviço externo.
+      </p>
+
+      <h2>Quais dados o app usa</h2>
+      <p>
+        Tudo o que você cria ao usar o Xalky Mesa — mesas, jogadores, pontuações,
+        partidas, notas, preferências — fica salvo apenas no seu próprio
+        dispositivo, em um banco de dados local. Nada sai do seu celular ou
+        tablet, a menos que você decida exportar.
+      </p>
+
+      <h2>Cópia de segurança</h2>
+      <p>
+        A função de cópia de segurança gera um arquivo com os seus dados e o
+        compartilha pelo seletor nativo do Android (por exemplo, para salvá-lo no
+        Google Drive ou enviá-lo de outra forma) — isso só acontece quando você
+        pede explicitamente, nunca de forma automática ou sem a sua participação.
+      </p>
+
+      <h2>Relatar um problema</h2>
+      <p>
+        Nas Configurações você pode usar "Relatar um problema ou sugestão". Essa
+        opção abre o seu próprio app de e-mail com uma mensagem pronta para <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>,
+        que inclui dados técnicos para nos ajudar a encontrar o problema: a
+        versão do app, o idioma, a marca e o modelo do dispositivo e a versão do
+        Android. O app não envia nada por conta própria: a mensagem só sai se
+        você enviar, e antes disso você pode ver, editar ou apagar qualquer um
+        desses dados. O e-mail que recebemos é usado apenas para responder a você
+        e resolver o problema.
+      </p>
+
+      <h2>Análise e publicidade</h2>
+      <p>
+        O Xalky Mesa não inclui nenhum SDK de análise, rastreamento de uso ou
+        publicidade de terceiros.
+      </p>
+
+      <h2>Compras no app</h2>
+      <p>
+        Alguns temas visuais de mesa são conteúdo pago e opcional. As compras são
+        processadas pelo Google Play Billing — o Xalky Mesa não recebe nem
+        armazena nenhum dado do seu meio de pagamento.
+      </p>
+
+      <h2>Permissões</h2>
+      <p>
+        O app não pede permissões de localização, câmera, contatos ou
+        armazenamento externo. O único acesso que usa é a vibração do
+        dispositivo em algumas interações de toque.
+      </p>
+
+      <h2>Mudanças nesta política</h2>
+      <p>
+        Se esta política mudar no futuro, a data de "última atualização" acima
+        será atualizada.
+      </p>
+
+      <h2>Contato</h2>
+      <p>
+        Se tiver alguma dúvida sobre esta política, escreva para <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>.
+        Você também pode ler os <a href="terms.html">Termos de Serviço</a>.
+      </p>
+      </div>
     </div>
   </div>
+<script>
+  (function () {
+    var langs = ['es', 'en', 'pt'];
+    function pick() {
+      try {
+        var q = new URLSearchParams(location.search).get('lang');
+        if (langs.indexOf(q) >= 0) return q;
+      } catch (e) {}
+      var nav = navigator.languages || [navigator.language || 'es'];
+      for (var i = 0; i < nav.length; i++) {
+        var code = String(nav[i]).slice(0, 2).toLowerCase();
+        if (langs.indexOf(code) >= 0) return code;
+      }
+      return 'es';
+    }
+    function show(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        el.hidden = el.getAttribute('data-lang') !== lang;
+      });
+      document.querySelectorAll('.lang-switch button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+      });
+      var t = document.querySelector('[data-lang="' + lang + '"] h1');
+      if (t) document.title = t.textContent + ' — Xalky Mesa';
+    }
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.addEventListener('click', function () { show(b.getAttribute('data-set')); });
+    });
+    show(pick());
+  })();
+</script>
 </body>
 </html>

@@ -84,16 +84,51 @@
     border-radius: 999px;
     margin-bottom: 18px;
   }
+
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .lang-switch button {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink700);
+    background: var(--papel);
+    border: 1.5px solid var(--mint300);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--mint400);
+    border-color: var(--mint600);
+    color: var(--ink900);
+  }
+
+  [data-lang][hidden] { display: none; }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1>Términos del Servicio</h1>
-      <div class="updated">Xalky Mesa · Última actualización: 18 de noviembre de 2026</div>
-    </header>
+    <nav class="lang-switch" aria-label="Idioma / Language">
+      <button type="button" data-set="es" aria-pressed="true">Español</button>
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+      <button type="button" data-set="pt" aria-pressed="false">Português</button>
+    </nav>
 
-    <div class="card">
+    <div data-lang="es">
+      <header>
+        <h1>Términos del Servicio</h1>
+        <div class="updated">Xalky Mesa · Última actualización: 18 de noviembre de 2026</div>
+      </header>
+
+      <div class="card">
       <span class="badge">Sin cuenta, sin conexión, sin publicidad</span>
 
       <h2>Aceptación</h2>
@@ -180,7 +215,223 @@
         Por cualquier consulta sobre estos términos, escribí a
         <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>.
       </p>
+      </div>
+    </div>
+
+    <div data-lang="en" hidden>
+      <header>
+        <h1>Terms of Service</h1>
+        <div class="updated">Xalky Mesa · Last updated: November 18, 2026</div>
+      </header>
+
+      <div class="card">
+      <span class="badge">No account, offline, no ads</span>
+
+      <h2>Acceptance</h2>
+      <p>
+        By downloading or using Xalky Mesa you accept these terms. If you don't
+        agree with them, don't use the app.
+      </p>
+
+      <h2>What Xalky Mesa is</h2>
+      <p>
+        Xalky Mesa is an app to keep score, track turns and use other tools
+        (dice, coin, timer, notes) for your board games. It's free, works without
+        an internet connection and doesn't require creating an account.
+      </p>
+
+      <h2>Permitted use</h2>
+      <p>
+        You may use the app for personal, non-commercial purposes. The
+        illustrations, design, visual themes and the Xalky brand belong to the
+        developer; you may not copy, redistribute or sell them separately from
+        the app.
+      </p>
+
+      <h2>In-app purchases</h2>
+      <p>
+        Some visual table themes are optional paid content. Each purchase is a
+        one-time payment (there are no subscriptions) and is processed through
+        Google Play, under its own terms and payment methods. What you buy is
+        linked to your Google account and is restored automatically if you
+        reinstall the app with that same account.
+      </p>
+      <p>
+        Refunds are handled under Google Play's policies. All content that is
+        free today will stay free.
+      </p>
+
+      <h2>Your data</h2>
+      <p>
+        Everything you enter in the app (tables, players, scores, notes,
+        preferences) is stored only on your device and remains yours: the
+        developer has no access to it. For that same reason, if you uninstall the
+        app or switch phones without first making a backup (from Settings), that
+        data can't be recovered. Details are in the
+        <a href="./">Privacy Policy</a>.
+      </p>
+
+      <h2>Availability and changes to the app</h2>
+      <p>
+        The app is provided as is. It may receive updates that add, change or
+        remove features, but purchases you've already made are kept. We do our
+        best for it to work well, but we can't guarantee it's free of errors on
+        every device. If you find a problem, let us know using "Report a problem"
+        in Settings.
+      </p>
+
+      <h2>Liability</h2>
+      <p>
+        To the extent permitted by law, the developer is not liable for indirect
+        damages arising from the use of the app, such as the loss of data stored
+        on the device. Nothing in these terms limits the rights granted to you by
+        the consumer protection laws of your country.
+      </p>
+
+      <h2>Governing law</h2>
+      <p>
+        These terms are governed by the laws of the Argentine Republic, without
+        prejudice to the consumer protection rules that apply to you in your
+        country of residence.
+      </p>
+
+      <h2>Changes to these terms</h2>
+      <p>
+        If these terms change, the "last updated" date above will be updated. If
+        the change is significant, we'll also announce it on the app's store
+        listing.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For any questions about these terms, write to <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>.
+      </p>
+      </div>
+    </div>
+
+    <div data-lang="pt" hidden>
+      <header>
+        <h1>Termos de Serviço</h1>
+        <div class="updated">Xalky Mesa · Última atualização: 18 de novembro de 2026</div>
+      </header>
+
+      <div class="card">
+      <span class="badge">Sem conta, sem internet, sem anúncios</span>
+
+      <h2>Aceitação</h2>
+      <p>
+        Ao baixar ou usar o Xalky Mesa, você aceita estes termos. Se não
+        concordar com eles, não use o app.
+      </p>
+
+      <h2>O que é o Xalky Mesa</h2>
+      <p>
+        O Xalky Mesa é um app para marcar a pontuação, os turnos e usar outras
+        ferramentas (dados, moeda, temporizador, notas) nos seus jogos de
+        tabuleiro. É gratuito, funciona sem internet e não exige criar uma conta.
+      </p>
+
+      <h2>Uso permitido</h2>
+      <p>
+        Você pode usar o app para fins pessoais e não comerciais. As ilustrações,
+        o design, os temas visuais e a marca Xalky pertencem ao desenvolvedor;
+        você não pode copiá-los, redistribuí-los nem vendê-los separadamente do
+        app.
+      </p>
+
+      <h2>Compras no app</h2>
+      <p>
+        Alguns temas visuais de mesa são conteúdo pago e opcional. Cada compra é
+        um pagamento único (não há assinaturas) e é processada pelo Google Play,
+        com seus próprios termos e meios de pagamento. O que você comprar fica
+        associado à sua conta do Google e é recuperado automaticamente se você
+        reinstalar o app com essa mesma conta.
+      </p>
+      <p>
+        Os reembolsos são tratados de acordo com as políticas do Google Play.
+        Todo o conteúdo que hoje é gratuito continuará sendo.
+      </p>
+
+      <h2>Seus dados</h2>
+      <p>
+        Tudo o que você registra no app (mesas, jogadores, pontuações, notas,
+        preferências) fica salvo apenas no seu dispositivo e continua sendo seu:
+        o desenvolvedor não tem acesso a essas informações. Por isso mesmo, se
+        você desinstalar o app ou trocar de celular sem antes fazer uma cópia de
+        segurança (nas Configurações), esses dados não podem ser recuperados. Os
+        detalhes estão na <a href="./">Política de Privacidade</a>.
+      </p>
+
+      <h2>Disponibilidade e mudanças no app</h2>
+      <p>
+        O app é oferecido no estado em que se encontra. Ele pode receber
+        atualizações que adicionem, mudem ou removam funções, mas as compras que
+        você já fez são mantidas. Fazemos o possível para que funcione bem, mas
+        não podemos garantir que esteja livre de erros em todos os dispositivos.
+        Se encontrar um problema, conte para nós usando "Relatar um problema" nas
+        Configurações.
+      </p>
+
+      <h2>Responsabilidade</h2>
+      <p>
+        Na medida permitida por lei, o desenvolvedor não se responsabiliza por
+        danos indiretos decorrentes do uso do app, como a perda de dados salvos
+        no dispositivo. Nada nestes termos limita os direitos garantidos a você
+        pelas leis de proteção ao consumidor do seu país.
+      </p>
+
+      <h2>Lei aplicável</h2>
+      <p>
+        Estes termos são regidos pelas leis da República Argentina, sem prejuízo
+        das normas de proteção ao consumidor que se aplicam a você no seu país de
+        residência.
+      </p>
+
+      <h2>Mudanças nestes termos</h2>
+      <p>
+        Se estes termos mudarem, a data de "última atualização" acima será
+        atualizada. Se a mudança for importante, também avisaremos na página do
+        app na loja.
+      </p>
+
+      <h2>Contato</h2>
+      <p>
+        Para qualquer dúvida sobre estes termos, escreva para <a href="mailto:xalkyjuegos@gmail.com">xalkyjuegos@gmail.com</a>.
+      </p>
+      </div>
     </div>
   </div>
+<script>
+  (function () {
+    var langs = ['es', 'en', 'pt'];
+    function pick() {
+      try {
+        var q = new URLSearchParams(location.search).get('lang');
+        if (langs.indexOf(q) >= 0) return q;
+      } catch (e) {}
+      var nav = navigator.languages || [navigator.language || 'es'];
+      for (var i = 0; i < nav.length; i++) {
+        var code = String(nav[i]).slice(0, 2).toLowerCase();
+        if (langs.indexOf(code) >= 0) return code;
+      }
+      return 'es';
+    }
+    function show(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        el.hidden = el.getAttribute('data-lang') !== lang;
+      });
+      document.querySelectorAll('.lang-switch button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+      });
+      var t = document.querySelector('[data-lang="' + lang + '"] h1');
+      if (t) document.title = t.textContent + ' — Xalky Mesa';
+    }
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.addEventListener('click', function () { show(b.getAttribute('data-set')); });
+    });
+    show(pick());
+  })();
+</script>
 </body>
 </html>
